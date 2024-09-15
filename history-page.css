@@ -1,0 +1,117 @@
+#history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+#history .description{
+    width: 40vw;
+    margin: 0;
+}
+
+.history-items {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    height: 30vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.history-item {
+    list-style: none;
+}
+
+.history-item i {
+    border: 3px solid #6C4E31;
+    border-radius: 100px;
+    background-color: #6C4E31;
+    color: white;
+}
+
+.history-item i:hover,
+.history-item i:active {
+    border: 3px solid #FFEAC5;
+    background-color: #FFEAC5;
+    color: #6C4E31;
+    cursor: default;
+}
+
+.history-item:first-child { transform: translateY(-45%); }
+
+.history-item:nth-child(2) { transform: translateY(-120%); }
+
+.history-item:nth-child(3) { transform: translateY(145%); }
+
+.history-item:nth-child(4) { transform: translateY(90%);}
+
+.history-item:nth-child(-n+4) {
+    position: relative;
+}
+
+.history-item:last-child {
+    position: absolute;
+    z-index: -1;
+}
+
+.history-item:last-child img {
+    width: 60vw;
+}
+
+.history-item .tooltip {
+    background-color: #FFEAC5;
+    color: #6C4E31;
+    text-align: center;
+    width: 12rem;
+    padding: .5rem;
+    margin: 0;
+    border: 3px solid #FFEAC5;
+    border-radius: 15px;
+    position: absolute;
+    top: -7.5rem;
+    left: -5rem;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.history-item:nth-child(2) .tooltip { top: -10rem; }
+
+.history-item:nth-child(3) .tooltip { top: -12.5rem; }
+
+.history-item:nth-child(4) .tooltip { top: -8.5rem;}
+
+.history-item .tooltip::after {
+    content: "";
+    background-color: #FFEAC5;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.history-item:hover .tooltip,
+.history-item:active .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 40rem) {
+    #history .description {
+        width: 80%;
+    }
+
+    .history-items {
+        display: block;
+    }
+
+    .history-item:nth-child(-n+4) { 
+        transform: translateY(0); 
+    }
+
+    .history-item:last-child {
+        display: none;
+    } 
+}
