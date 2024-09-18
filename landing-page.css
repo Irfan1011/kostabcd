@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    padding: 10rem;
+    padding: 5%;
     display: grid;
     grid-template-columns: repeat(2, auto);
     align-items: center;

@@ -55,7 +55,6 @@
 
 .review-item__description {
     padding: 0 2rem;
-    width: 50vw;
     text-align: justify;
 }
 
@@ -139,7 +138,6 @@
 
     .review-item {
         flex-direction: column;
-        width: auto;
     }
 
     .review-item:nth-child(2) {
@@ -171,8 +169,15 @@
     .review-item__img-container > img {
         transform: none;
         border-radius: 30px;
-        width: 100%;
         height: 50vh;
+    }
+
+    .review-item__img-container {
+        align-self: center;
+    }
+
+    .review-item__img-container > img {
+        width: 100%;
     }
 
     .review__cards {
